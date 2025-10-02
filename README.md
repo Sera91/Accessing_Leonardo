@@ -24,4 +24,9 @@ ssh leonard
 ## Setting conda environment
 
 After loading the git module ( module load git) you can clone this repo in your $HOME on Leonardo,
+cd in the testing-Jupyter subfolder
+and run with bash the setup_conda.sh script 
+
+To load any needed module usefule for DL applications you need first to load the user profile:
+module load profile/deeplrn
 and then you can simply run:
