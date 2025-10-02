@@ -30,3 +30,12 @@ and run with bash the setup_conda.sh script
 To load any needed module usefule for DL applications you need first to load the user profile:
 module load profile/deeplrn
 and then you can simply run:
+
+
+## Budget 
+
+saldo -b (for gpu partition)
+
+with each budget you get a work area located at this address:
+
+/leonardo_work/BUDGET_NAME/
