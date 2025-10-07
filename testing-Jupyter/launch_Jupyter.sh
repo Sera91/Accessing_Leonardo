@@ -1,7 +1,6 @@
 #!/bin/bash -l
-#SBATCH -A tra25_ictp_scd
+#SBATCH -A ICT25_ESP_0
 #SBATCH -p boost_usr_prod
-#SBATCH --reservation=s_tra_ictp_scd
 #SBATCH --time 1:15:00       # format: HH:MM:SS
 #SBATCH -N 1
 #SBATCH --ntasks-per-node=2
@@ -13,7 +12,7 @@
 #SBATCH --error=jupyter_notebook.err
 
 
-cd $SCRATCH/SMR4067-ICTP/
+cd $SCRATCH/Accessing_Leonardo/testing-Jupyter/
 
 source $HOME/Conda_init.txt
 
@@ -29,7 +28,7 @@ module load fftw/3.3.10--gcc--11.3.0
 
 #conda activate /leonardo/pub/usertrain/a08trc01/env/SMR3941
 
-conda activate /leonardo/pub/userexternal/sdigioia/sdigioia/env/Gabenv
+conda activate /leonardo/pub/userexternal/sdigioia/sdigioia/env/RLenv
 
 
 # get tunneling info
@@ -50,7 +49,7 @@ echo -e "
 #       Check jupyter_notebook_%j.err to find the port.
 
 # Command to create SSH tunnel:
-ssh  -o \"PreferredAuthentications=keyboard-interactive,password\" -o \"StrictHostKeyChecking=no\" -o \"UserKnownHostsFile=/dev/null\" -o \"LogLevel ERROR\"  -N -f -L  $portval:${node}:$portval ${user}@login01-ext.leonardo.cineca.it
+ssh -N -f -L $portval:${node}:$portval ${user}@$login.leonardo.cineca.it
 # Use a browser on your local machine to go to:
 http://localhost:$portval/
 "
