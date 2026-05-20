@@ -3,7 +3,10 @@ This repo provide the instruction to access Leonardo cluster at CINECA,  to setu
 
 
 ## 2FA access via terminal 
-Once configured the step client you can generate locally a certificate plus a key launching in your local terminal the command:
+Once installed and configured the step client, followying the instruction at this webpage:
+https://docs.hpc.cineca.it/general/access.html
+
+you can generate locally a certificate plus a key launching in your local terminal the command:
 
 step ssh certificate 'sdigioia' --provisioner cineca-hpc .ssh/leo_key
 
