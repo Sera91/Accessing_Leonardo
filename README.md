@@ -37,7 +37,9 @@ and then you can simply run:
 
 ## Budget 
 
-saldo -b (for gpu partition)
+saldo -b (for Leonardo BOOSTER, gpu partition)
+
+saldo -b --dcgp (to get a report for the DCGP partition on Leonardo, cpu partition)
 
 with each budget you get a work area located at this address:
 
